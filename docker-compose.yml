@@ -1,0 +1,30 @@
+version: "3.8"
+
+services:
+  api:
+    build: .
+    container_name: recsys-api
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./data:/app/data
+      - ./models:/app/models
+    environment:
+      - PYTHONUNBUFFERED=1
+    restart: unless-stopped
+
+  ui:
+    build: .
+    container_name: recsys-ui
+    ports:
+      - "8501:8501"
+    volumes:
+      - ./data:/app/data
+      - ./models:/app/models
+    environment:
+      - PYTHONUNBUFFERED=1
+      - API_URL=http://api:8000
+    command: streamlit run ui/app.py --server.port 8501 --server.address 0.0.0.0
+    depends_on:
+      - api
+    restart: unless-stopped

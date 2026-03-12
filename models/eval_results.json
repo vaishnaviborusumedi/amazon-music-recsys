@@ -1,0 +1,32 @@
+{
+  "precision@5": {
+    "als": 0.0432,
+    "content": 0.0448,
+    "hybrid": 0.0472
+  },
+  "recall@5": {
+    "als": 0.139,
+    "content": 0.1376,
+    "hybrid": 0.1542
+  },
+  "ndcg@5": {
+    "als": 0.1275,
+    "content": 0.1338,
+    "hybrid": 0.1407
+  },
+  "precision@10": {
+    "als": 0.0266,
+    "content": 0.0288,
+    "hybrid": 0.0306
+  },
+  "recall@10": {
+    "als": 0.1716,
+    "content": 0.1755,
+    "hybrid": 0.1955
+  },
+  "ndcg@10": {
+    "als": 0.1395,
+    "content": 0.1479,
+    "hybrid": 0.156
+  }
+}

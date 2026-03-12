@@ -1,0 +1,17 @@
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+.env
+.git
+.gitignore
+*.egg-info/
+dist/
+build/
+.ipynb_checkpoints/
+notebooks/
+*.json.gz
+*.png
+.DS_Store
+Thumbs.db
