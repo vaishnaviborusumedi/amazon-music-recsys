@@ -1,14 +1,11 @@
 services:
   - type: web
-    name: music-recsys-api
+    name: amazon-music-recsys
     env: python
+    region: oregon
+    plan: free
     buildCommand: pip install -r requirements.txt
     startCommand: uvicorn api.deploy_main:app --host 0.0.0.0 --port $PORT
     envVars:
       - key: PYTHON_VERSION
-        value: 3.10.0
-```
-
-**Create `Procfile` in your project root:**
-```
-web: uvicorn api.deploy_main:app --host 0.0.0.0 --port $PORT
+        value: 3.10.14
