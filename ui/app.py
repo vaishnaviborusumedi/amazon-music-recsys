@@ -9,7 +9,7 @@ st.set_page_config(
     layout     = "wide"
 )
 
-API_URL = "http://localhost:8000"
+API_URL = "https://amazon-music-recsys-3.onrender.com"
 
 # ── Custom CSS ────────────────────────────────────────────
 st.markdown("""
